@@ -44,7 +44,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String apiKey = 'c43b3056bfb9b0f47f2c6ebd4f675ef0';
+  String apiKey = 'your API key for OpenWeatherMap';
   String city = 'Kochi';
   String apiUrl =
       'https://api.openweathermap.org/data/2.5/weather?q=Kochi&appid=c43b3056bfb9b0f47f2c6ebd4f675ef0&units=metric';
