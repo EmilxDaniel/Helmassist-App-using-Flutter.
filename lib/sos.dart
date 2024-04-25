@@ -29,7 +29,6 @@ class _SOSMessagePageState extends State<SOSMessagePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _retrieveSOSData();
   }
