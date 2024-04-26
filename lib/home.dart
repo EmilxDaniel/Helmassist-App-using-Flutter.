@@ -18,7 +18,7 @@ import 'noti.dart';
 import 'package:flutter/services.dart';
 import 'Find_bike.dart';
 import 'package:telephony/telephony.dart' hide SmsStatus;
-import 'package:sms_mms/sms_mms.dart';
+// import 'package:sms_mms/sms_mms.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -359,8 +359,11 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(fontSize: 16),
                           ),
                           SizedBox(height: 20),
-                          Text(
-                              '                     Speed: ${(double.parse(fast) * 3.6).toStringAsFixed(2)} Km/hr'),
+                          if (fast != 'Loading...')
+                            Text(
+                                '                     Speed: ${(double.parse(fast) * 3.6).toStringAsFixed(2)} Km/hr')
+                          else
+                            Text('                                  ${fast}')
                         ],
                       ),
                   ],
@@ -447,7 +450,7 @@ class _HomePageState extends State<HomePage> {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.grey[800],
+          backgroundColor: Colors.black,
           foregroundColor: Colors.white,
           padding: EdgeInsets.all(20.0),
           shape: RoundedRectangleBorder(
