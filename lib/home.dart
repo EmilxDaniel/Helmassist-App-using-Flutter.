@@ -359,7 +359,8 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(fontSize: 16),
                           ),
                           SizedBox(height: 20),
-                          Text('                           Speed: ${fast}'),
+                          Text(
+                              '                     Speed: ${(double.parse(fast) * 3.6).toStringAsFixed(2)} Km/hr'),
                         ],
                       ),
                   ],
