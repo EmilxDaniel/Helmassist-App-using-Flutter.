@@ -97,7 +97,7 @@ class _login_pageState extends State<login_page> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text('Wrong credentials'),
-                          duration: Duration(seconds: 2),
+                          duration: Duration(seconds: 1),
                         ),
                       );
                     });
@@ -138,6 +138,5 @@ class _login_pageState extends State<login_page> {
     final SharedPreferences shp = await SharedPreferences.getInstance();
     await shp.setString('email', _emailTextController.text);
     await shp.setString('pass', _passwordTextController.text);
-    // await shp.setString('user', username);
   }
 }
